@@ -1,1 +1,172 @@
 <!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한폰타자</title>
+    
+    <!-- Bootstrap CSS & Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style_1.css">
+
+</head>
+<body class="retro-theme"> <!-- 기본 테마를 body 클래스로 설정 -->
+    <!-- 상단 바: 테마 스위처와 사용자 정보 -->
+    <div class="top-bar">
+        <div class="theme-switcher">
+            <button id="retro-btn" class="theme-btn active">레트로</button>
+            <button id="newtro-btn" class="theme-btn">뉴트로</button>
+        </div>
+        <div class="user_info">USER: GUEST</div>
+    </div>
+
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="title">⌨️ 한폰타자</div>
+        <nav class="menu">
+            <a href="#">[홈]</a>
+            <a href="#">[타자연습]</a>
+            <a href="#">[타자배틀]</a>
+            <a href="#">[설정]</a>
+        </nav>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="container my-4 my-sm-5">
+        <!-- 프로필 카드 섹션 -->
+             <!-- 사용자 프로필 -->
+        <div class="profile-box">
+        <h3>👨‍💻 김정인 프로필</h3>
+        <p>레벨: 중급</p>
+        <p>누적 점수: 12,340</p>
+        <p>승률: 73%</p>
+        </div>
+        <!-- 연습 카드 섹션 -->
+        <div class="row g-4 mb-5 practice-card-section">
+            <!-- 초급 연습 카드 -->
+            <div class="col-md-6">
+                <a href="#" class="card custom-card h-100 text-decoration-none">
+                    <div class="card-body text-center p-4">
+                        <h2 class="card-title h3 fw-bold mb-3" style="color: #FFD700;">초급 연습</h2>
+                        <img id="chobo-img" src="./images/chobo_retro.png" class="mb-3" alt="초급 연습 아이콘">
+                        <p class="card-text">어르신도 배우면서 할 수 있는<br>타자연습</p>
+                    </div>
+                </a>
+            </div>
+            <!-- 중급 연습 카드 -->
+            <div class="col-md-6">
+                <a href="#" class="card custom-card h-100 text-decoration-none">
+                    <div class="card-body text-center p-4">
+                        <h2 class="card-title h3 fw-bold mb-3" style="color: #FF4500;">중급 연습</h2>
+                        <img id="pro-img" src="./images/pro_retor.png" class="mb-3" alt="중급 연습 아이콘">
+                        <p class="card-text">좀 더 익숙하고 자연스러운<br>타자를 위한 연습</p>
+                    </div>
+                </a>
+            </div>
+            <!-- 상급 연습 카드 -->
+            <div class="col-md-6">
+                <a href="#" class="card custom-card h-100 text-decoration-none">
+                    <div class="card-body text-center p-4">
+                        <h2 class="card-title h3 fw-bold mb-3" style="color: #00BFFF;">상급 연습</h2>
+                        <img id="god-img" src="./images/god_retro.png" class="mb-3" alt="상급 연습 아이콘">
+                        <p class="card-text">손가락이 안보이는 신의경지!</p>
+                    </div>
+                </a>
+            </div>
+            <!-- 타자 배틀 카드 -->
+            <div class="col-md-6">
+                <a href="#" class="card custom-card h-100 text-decoration-none">
+                    <div class="card-body text-center p-4">
+                        <h2 class="card-title h3 fw-bold mb-3" style="color: #ADFF2F;">타자 배틀</h2>
+                        <img id="fight-img" src="./images/fight_retro.png" class="mb-3" alt="타자 배틀 아이콘">
+                        <p class="card-text">타자 고수들과 다양한 방식으로<br>실력을 겨뤄보세요</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- 배틀 랭킹 -->
+      <div class="ranking-panel">
+        <h2>🏆 키보드 배틀 랭킹</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-2 gap-sm-3 mb-5">
+                    <button type="button" class="btn btn-beginner fw-semibold">초보자 랭킹</button>
+                    <button type="button" class="btn btn-intermediate fw-semibold">중급자 랭킹</button>
+                    <button type="button" class="btn btn-advanced fw-semibold">상급자 랭킹</button>
+                    <button type="button" class="btn btn-battle fw-semibold">배틀 랭킹</button>
+                </div>
+        <ul id="ranking-list">
+          <li>🥇1등: 유저A - 700타</li>
+          <li>🥈2등: 유저B - 600타</li>
+          <li>🥉3등: 유저C - 300타</li>
+          <li>4등: 유저D - 290타</li>
+          <li>5등: 유저E - 250타</li>
+          <li>6등: 유저F - 230타</li>
+          <li>7등: 유저G - 210타</li>
+          <li>8등: 유저H - 190타</li>
+          <li>9등: 유저I - 150타</li>
+          <li>10등: 유저J - 130타</li>
+          <br />
+          <!-- 필요시 동적으로 생성 -->
+        </ul>
+      </div>
+
+        <!-- 명예의 전당 섹션 -->
+        <div class="card shadow-sm hall-of-fame-card">
+            <div class="card-body p-4 p-sm-5">
+                <h2 class="card-title text-center display-6 fw-bold mb-5">명예의 전당</h2>
+                <div class="d-flex flex-wrap justify-content-center gap-2 gap-sm-3 mb-5">
+                    <button type="button" class="btn btn-beginner fw-semibold">초보자 랭킹</button>
+                    <button type="button" class="btn btn-intermediate fw-semibold">중급자 랭킹</button>
+                    <button type="button" class="btn btn-advanced fw-semibold">상급자 랭킹</button>
+                    <button type="button" class="btn btn-battle fw-semibold">배틀 랭킹</button>
+                </div>
+                <!-- 랭킹 리스트 -->
+                <ul class="list-group list-group-flush fs-5">
+                        <li class="list-group-item d-flex justify-content-between align-items-center rank-1">
+                            <span><i class="bi bi-trophy-fill me-2"></i>1위. 타자고수</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">1200타/분</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center rank-2">
+                            <span><i class="bi bi-award-fill me-2"></i>2위. 번개손가락</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">1100타/분</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center rank-3">
+                            <span><i class="bi bi-award me-2"></i>3위. 송일타</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">1000타/분</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="ms-4 ps-2">4위. 키보드워리어</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">950타/분</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="ms-4 ps-2">5위. 신들린타이핑</span>
+                            <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">900타/분</span>
+                        </li>
+                </ul>
+            </div>
+ 
+        </div>
+    <!-- [수정됨] 명령어 입력창을 감싸는 컨테이너 -->
+    <div class="command-container">
+        <div class="main__cmdbar">명령어 입력창</div>
+        <div class="main__cmdscreen">
+            번호/명령(GO, T, Z, LO, X 등 입력) >>
+            <input
+              type="text"
+              id="CMDINPUT"
+              class="명령입력"
+              placeholder="명령어 입력창 입니다."
+              autocomplete="off"
+            />
+            <div id="MSGBOX" class="메시지박스"></div>
+        </div>
+    </div>
+  
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</body>
+</html>
