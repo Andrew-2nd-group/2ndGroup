@@ -198,9 +198,6 @@
 } */
 
 @media (max-width: 1240px) {
-  /* .practice-card-section {
-    margin-top: 160px;
-  } */
 
   /* [변경] 프로필 박스를 일반 블록 요소처럼 동작하도록 변경하여 중앙에 배치합니다. */
   .retro-theme .profile-box,
@@ -208,9 +205,9 @@
     position: static !important;   /* [중요] absolute 포지셔닝을 완전히 해제합니다. */
     /*order: -1;           flex 아이템 순서를 가장 위로 변경합니다. */
     
-    width: 100%;         /* 너비 설정 */
+    width: 95% !important;         /* 너비 설정 */
     margin: 0 auto 15px;  /* 상하 마진으로 공간을 만들고, 좌우 auto로 중앙 정렬 */
-
+    text-align: center;
   }
 }
 
@@ -230,11 +227,11 @@
 
 .retro-theme .profile-box h3 {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .retro-theme .profile-box p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 4px 0;
 }
 
